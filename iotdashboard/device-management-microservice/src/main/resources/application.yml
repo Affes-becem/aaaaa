@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: device-management-microservice
+  data:
+    mongodb:
+      host: mongodb
+      port: 27017
+      database: iot
+      username: admin
+      password: welcome1
+  cloud:
+    config:
+      uri: http://localhost:8888
+server:
+  port: 8100
+eureka:
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      zone: zone1
+  client:
+    prefer-same-zone-eureka: true
+    register-with-eureka: true
+    region: region1
+    service-url:
+      zone1: http://eureka-discovery-service:8761/eureka/
+    availability-zones:
+      region1: zone1
+
+ribbon:
+  eureka:
+    enabled: true
