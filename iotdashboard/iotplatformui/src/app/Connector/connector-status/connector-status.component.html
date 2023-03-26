@@ -1,0 +1,43 @@
+<h1>Connector status</h1>
+<div>
+    <div>
+        <h4>name :</h4>
+        {{connectorStatus.name}}
+    </div>
+    <div>
+        <h4>connector : </h4>
+        <div>
+            state : {{connectorStatus.connector.state}}
+        </div>
+        <div>
+            worker_id : {{connectorStatus.connector.worker_id}}
+        </div>
+    </div>
+    <h4>tasks :</h4>
+    <div class="table-responsive">
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>state</th>
+                    <th>worker_id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of connectorStatus.tasks">
+                    <td>{{task.id}}</td>
+                    <td>{{task.state}}</td>
+                    <td>{{task.worker_id}}</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <div>
+        type : source
+    </div>
+</div>

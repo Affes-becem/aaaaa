@@ -1,0 +1,60 @@
+<div>
+  <mat-card class="profile-card">
+    <mat-card-title>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="8px">
+        <div fxFlex fxLayout="column">
+          <span class="mat-headline">Edit User</span>
+        </div>
+      </div>
+
+    </mat-card-title>
+    <mat-card-content style="padding-top: 16px;">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div >
+
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName">
+          </mat-form-field>
+
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input formControlName="lastName" matInput>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input formControlName="username" matInput>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input [type]="hide ? 'password' : 'text'" formControlName="password" matInput>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Phone Number</mat-label>
+            <input formControlName="phoneNumber" matInput>
+          </mat-form-field>
+          <br>
+          <div fxLayout="row" style="padding-bottom: 16px;">
+            <button mat-button mat-raised-button color="primary"
+                    type="submit">Save
+            </button>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,53 @@
+<section>
+  <div class="example-button-row">
+    <a mat-raised-button color="primary" routerLink="/sensors/add">Add Sensor</a>
+  </div>
+</section>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="sensors" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="port">
+      <th mat-header-cell *matHeaderCellDef>Port Node</th>
+      <td mat-cell *matCellDef="let sensor">{{sensor.port}}</td>
+    </ng-container>
+    <ng-container matColumnDef="typeSensor">
+      <th mat-header-cell *matHeaderCellDef>Type of Sesnsor</th>
+      <td mat-cell *matCellDef="let sensor">{{sensor.typeSensor}}</td>
+    </ng-container>
+    <ng-container matColumnDef="errorRate">
+      <th mat-header-cell *matHeaderCellDef>Error Rate</th>
+      <td mat-cell *matCellDef="let sensor">{{sensor.errorRate}}</td>
+    </ng-container>
+    <ng-container matColumnDef="installDate">
+      <th mat-header-cell *matHeaderCellDef>InstallDate</th>
+      <td mat-cell *matCellDef="let sensor">{{sensor.installDate  | date: 'dd-MM-yyyy' }}</td>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let sensor">{{sensor.status}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let sensor">
+        <section>
+          <div class="example-button-row">
+            <button (click)="deleteSensor(sensor.id)" mat-fab color="primary"
+                    aria-label="Example icon button with a delete icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+            <button (click)="sensorDetails(sensor.id)" mat-raised-button color="accent">Details</button>
+            <a routerLink="/sensors/update/{{sensor.id}}" mat-raised-button>Edit</a>
+          </div>
+
+
+        </section>
+      </td>
+
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

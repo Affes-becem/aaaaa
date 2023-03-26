@@ -1,0 +1,44 @@
+<h4>
+    Stored connecters List
+</h4>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>connectorId</th>
+                <th>name</th>
+                <th>connectorClass</th>
+                <th>tasksMax</th>
+                <th>mqttServerUri</th>
+                <th>mqttTopics</th>
+                <th>kafkaTopic</th>
+                <th>confluentTopicBootstrapServers</th>
+                <th>confluentTopicReplicationFactor</th>
+                <th>confluentLicense</th>
+                <th>delete/edite/deploy</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let connector of connectors">
+                <td>{{connector.connectorId}}</td>
+                <td>{{connector.name}}</td>
+                <td>{{connector.config.connectorClass}}</td>
+                <td>{{connector.config.taskMax}}</td>
+                <td>{{connector.config.mqttServerUri}}</td>
+                <td>{{connector.config.mqttTopics}}</td>
+                <td>{{connector.config.kafkaTopic}}</td>
+                <td>{{connector.config.confluentTopicBootstrapServers}}</td>
+                <td>{{connector.config.confluentTopicReplicationFactor}}</td>
+                <td>{{connector.config.confluentLicense}}</td>
+                <td>
+                    <button class="btn btn-default" (click)="deleteConnector(connector.connectorId)">Delete</button>
+                    <a routerLink="/updateConnector/{{connector.connectorId}}">Edit</a><br>
+                    <button class="btn btn-default" (click)="deployConnector(connector)">Deploy</button>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

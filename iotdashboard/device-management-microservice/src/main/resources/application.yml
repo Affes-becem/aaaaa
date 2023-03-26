@@ -3,11 +3,12 @@ spring:
     name: device-management-microservice
   data:
     mongodb:
-      host: mongodb
+      host: localhost
       port: 27017
       database: iot
-      username: admin
-      password: welcome1
+      username: root
+      password: root
+      authentication-database: admin
   cloud:
     config:
       uri: http://localhost:8888
@@ -22,8 +23,9 @@ eureka:
     prefer-same-zone-eureka: true
     register-with-eureka: true
     region: region1
-    service-url:
-      zone1: http://eureka-discovery-service:8761/eureka/
+    serviceUrl:
+      zone1: http://localhost:8761/eureka/
+
     availability-zones:
       region1: zone1
 

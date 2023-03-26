@@ -4,29 +4,75 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8fe70d2-86e0-42db-9f25-9591a2c1bc17" name="Changes" comment="" />
+    <list default="true" id="b8fe70d2-86e0-42db-9f25-9591a2c1bc17" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/IOTDashboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IOTDashboard.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotdashboard/device-management-microservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotdashboard/device-management-microservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotdashboard/device-management-microservice/src/main/java/com/devices/management/DeviceManagementMicroserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotdashboard/device-management-microservice/src/main/java/com/devices/management/DeviceManagementMicroserviceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotdashboard/device-management-microservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/iotdashboard/device-management-microservice/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MXicXDU5JobYwaigLKi5EsGk0c" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (angular-9-registration-login-example)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/iotdashboard/iotplatformui/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/iotdashboard/iotplatformui/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$/iotdashboard/iotplatformui" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (angular-9-registration-login-example)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/iotdashboard/iotplatformui/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-package value="" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/iotdashboard/iotplatformui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -36,6 +82,12 @@
       <option name="presentableId" value="Default" />
       <updated>1677920409208</updated>
       <workItem from="1677920410216" duration="333000" />
+      <workItem from="1679387559698" duration="708000" />
+      <workItem from="1679392180308" duration="3939000" />
+      <workItem from="1679411204680" duration="63000" />
+      <workItem from="1679411363215" duration="145000" />
+      <workItem from="1679411646284" duration="121000" />
+      <workItem from="1679430609729" duration="35000" />
     </task>
     <servers />
   </component>

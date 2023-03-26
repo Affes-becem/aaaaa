@@ -1,0 +1,22 @@
+<h1>Running connectors list</h1>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let connectorName of connectors">
+                <td>{{connectorName}}</td>
+                <td>
+                    <button class="btn btn-default" (click)="deleteConnector(connectorName)">Delete</button> <br>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

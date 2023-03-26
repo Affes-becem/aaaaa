@@ -1,0 +1,38 @@
+<h2>Node Details</h2>
+
+<hr/>
+<div *ngIf="node != null">
+  <div>
+    <label><b>Name: </b></label> {{node.nameNode}}
+  </div>
+  <div>
+    <label><b>Address: </b></label> {{node.address}}
+  </div>
+  <div>
+    <label><b>Manufacturer: </b></label> {{node.manufacturer}}
+  </div>
+  <div>
+    <label><b>Type: </b></label> {{node.type}}
+  </div>
+  <div>
+    <label><b>Memory Capacity: </b></label> {{node.memoryCapacity}}
+  </div>
+  <div>
+    <label><b>Calculation Capacity: </b></label> {{node.calculationCapacity}}
+  </div>
+  <div>
+    <label><b>Risidual Energy: </b></label> {{node.risidualEnergy}}
+  </div>
+
+<!--   <div>-->
+<!--       <label><b>Install Date: </b></label> {{node.installDate}}-->
+<!--   </div>-->
+<!--   <div>-->
+<!--       <label><b>Status: </b></label> {{node.status}}-->
+<!--   </div> -->
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to node List</button><br>

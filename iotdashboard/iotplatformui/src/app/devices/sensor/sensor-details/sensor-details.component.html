@@ -1,0 +1,25 @@
+<h2>Sensor Details</h2>
+
+<hr />
+<div *ngIf = "sensor != null">
+  <div>
+    <label><b>Port: </b></label> {{sensor.port}}
+  </div>
+  <div>
+    <label><b>Type of Sensor: </b></label> {{sensor.typeSensor}}
+  </div>
+  <div>
+    <label><b>Error Rate: </b></label> {{sensor.errorRate}}
+  </div>
+  <div>
+    <label><b>Install Date: </b></label> {{sensor.installDate}}
+  </div>
+  <div>
+    <label><b>Status: </b></label> {{sensor.status}}
+  </div>
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Sensor List</button><br>

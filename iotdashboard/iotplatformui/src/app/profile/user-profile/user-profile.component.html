@@ -1,0 +1,66 @@
+<div class="row">
+  <!--<img src="assets/images/user/avatar-2.jpg" class="rounded-circle mx-auto d-block wid-150 hei-150"
+       alt="User-Profile-Image">-->
+
+  <div class="col-sm-12">
+    <ngb-tabset type="pills">
+      <ngb-tab title="PROFILE" class="mb-3">
+        <ng-template ngbTabContent>
+          <div class="col-sm-12">
+            <dl class="dl-horizontal row">
+              <dt class="col-sm-3">Username</dt>
+              <dd class="col-sm-9">{{user?.username}}</dd>
+
+              <dt class="col-sm-3">Role</dt>
+              <dd class="col-sm-9">
+                <div [ngSwitch]="role">
+                  <div *ngSwitchCase="'ROLE_SUPER_ADMIN'">
+                    <span>Super Admin</span>
+                  </div>
+                  <div *ngSwitchCase="'ROLE_USER'">
+                    <span>User</span>
+                  </div>
+
+                  <div *ngSwitchCase="'ROLE_ADMIN'">
+                    <span>Admin</span>
+                  </div>
+
+                  <div *ngSwitchDefault>
+                    <span>{{role}}</span>
+                  </div>
+                </div>
+              </dd>
+
+            </dl>
+          </div>
+          <div class="col-sm-12">
+            <dl class="dl-horizontal row">
+
+              <dt class="col-sm-3">First Name</dt>
+              <dd class="col-sm-9">{{user?.userDetails?.firstName}}
+              </dd>
+              <dt class="col-sm-3">Last Name</dt>
+              <dd class="col-sm-9">{{user?.userDetails?.lastName}}
+              </dd>
+
+              <dt class="col-sm-3">Email</dt>
+              <dd class="col-sm-9">{{user?.userDetails?.email}}</dd>
+              <dt class="col-sm-3">Phone</dt>
+              <dd class="col-sm-9">{{user?.userDetails?.phoneNumber}}</dd>
+
+
+            </dl>
+
+            <div>
+              <button type="button" [routerLink]="['/profile/edit']" class="btn btn-primary float-right"
+                      ngbTooltip="update profile">Update Profile
+              </button>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+
+    </ngb-tabset>
+  </div>
+</div>
+

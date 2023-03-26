@@ -1,0 +1,55 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<noscript>
+    <h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being enabled. Please enable Javascript and reload this page!</h2>
+    </noscript>
+<div id="main-content" class="container">
+    <h1>Edit connector</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <form [formGroup]="form" class="form-inline" (ngSubmit)="onSubmit()">
+                <!-- <div class="form-group">
+                    <label for="name">connectorId</label>
+                    <input type="text" class="form-control" formControlName="connectorId"> <br>
+                </div> -->
+                <div class="form-group">
+                    <label for="name">name</label>
+                    <input type="text" class="form-control" formControlName="name"> <br>
+                </div>
+                <div class="form-group">
+                    <label for="name">connector class</label>
+                    <input type="text" class="form-control" formControlName="connectorClass"> <br>
+                </div>
+                <div class="form-group">
+                    <label for="name">tasks max</label>
+                    <input type="text" class="form-control" formControlName="taskMax"> <br>
+                </div>
+                <div class="form-group">
+                    <label for="name">mqtt server uri</label>
+                    <input type="text" class="form-control" formControlName="mqttServerUri"> <br>
+                </div>
+                <div class="form-group">
+                    <label for="name">mqtt.topics</label>
+                    <input type="text" class="form-control" formControlName="mqttTopics"> <br>
+                </div>
+                <div class="form-group">
+                    <label for="name">kafka topic</label>
+                    <input type="text" class="form-control" formControlName="kafkaTopic"> <br>
+                </div>
+                <div class="form-group">
+                    <label for="name">confluent topic bootstrap servers</label>
+                    <input type="text" class="form-control" formControlName="confluentTopicBootstrapServers"> <br>
+                </div>
+                <div class="form-group">
+                    <label for="name">confluent topic replication factor</label>
+                    <input type="text" class="form-control" formControlName="confluentTopicReplicationFactor"> <br>
+                </div>
+                <div class="form-group">
+                    <label for="name">confluent license</label>
+                    <input type="text" class="form-control" formControlName="confluentLicense"> <br>
+                </div>
+                <button class="btn btn-default" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

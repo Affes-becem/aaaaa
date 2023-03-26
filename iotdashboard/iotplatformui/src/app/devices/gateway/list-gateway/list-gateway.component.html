@@ -1,0 +1,48 @@
+<section>
+  <div class="example-button-row">
+    <a mat-raised-button color="primary" routerLink="/gateways/add">Add Gateway</a>
+  </div>
+</section>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="gateways" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="typeGateway">
+      <th mat-header-cell *matHeaderCellDef>Type of Gateway</th>
+      <td mat-cell *matCellDef="let gateway">{{gateway.typeGateway}}</td>
+    </ng-container>
+    <div class="col-md-6">
+      <ng-container matColumnDef="ipAddress">
+        <th mat-header-cell *matHeaderCellDef>Ip Address</th>
+        <td mat-cell *matCellDef="let gateway">{{gateway.ipAddress}}</td>
+      </ng-container>
+    </div>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let gateway">{{gateway.status}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let gateway">
+        <section>
+          <div class="example-button-row">
+            <button (click)="deleteGateway(gateway.id)" mat-fab color="primary"
+                    aria-label="Example icon button with a delete icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+            <button (click)="gatewayDetails(gateway.id)" mat-raised-button color="accent">Details</button>
+            <a routerLink="/gateways/update/{{gateway.id}}" mat-raised-button>Edit</a>
+            <a [routerLink]="['list/',gateway.id,'node']" mat-raised-button>Nodes</a>
+          </div>
+
+
+        </section>
+      </td>
+
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
